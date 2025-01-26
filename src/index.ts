@@ -1,10 +1,14 @@
-import "reflect-metadata";
+// TODO: move this line
+import "reflect-metadata"
 
-import { Graph } from "./Graph"
-import { EventEmitter2 } from "eventemitter2"
-import { TestDance } from "./test.dance";
-import { DANCE_METADATA_KEY } from "./constants";
+import { Orchestrator } from "./classes/Orchestrator";
+import { TestDance } from "./dances/test.dance";
 
-const emitter = new EventEmitter2()
+class Test {}
 
-const testDance = new TestDance()
+const orchestrator = Orchestrator.register({
+  dances: [TestDance, Test]
+})
+
+
+orchestrator.start(TestDance)

@@ -1,6 +1,7 @@
-import { Act } from "./decorators/act.decorator"
-import { Dance } from "./decorators/dance.decorator"
-import { Graph } from "./Graph"
+import { Act } from "../decorators/act.decorator"
+import { Dance } from "../decorators/dance.decorator"
+import { Graph } from "../classes/Graph"
+import { ADance } from "../classes/ADance"
 
 const graph = new Graph<string>()
 
@@ -36,7 +37,7 @@ graph.addEdge('deleteUser', 'reset')
   name: "test",
   graph
 })
-export class TestDance {
+export class TestDance extends ADance {
 
   @Act('action')
   deleteUser() {

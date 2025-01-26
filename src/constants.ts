@@ -1,3 +1,5 @@
 
 
 export const DANCE_METADATA_KEY = 'DANCE_METADATA_KEY'
+
+export const ACT_METADATA_KEY = 'ACT_METADATA_KEY'

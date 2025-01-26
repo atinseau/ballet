@@ -1,8 +1,7 @@
 {
-  "lockfileVersion": 1,
+  "lockfileVersion": 0,
   "workspaces": {
     "": {
-      "name": "ballet",
       "dependencies": {
         "eventemitter2": "^6.4.9",
         "reflect-metadata": "^0.2.2",

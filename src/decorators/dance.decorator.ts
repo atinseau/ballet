@@ -1,5 +1,5 @@
 import { DANCE_METADATA_KEY } from "../constants"
-import type { Graph } from "../Graph"
+import type { Graph } from "../classes/Graph"
 
 type DanceOptions<T> = {
   name: string
@@ -8,6 +8,6 @@ type DanceOptions<T> = {
 
 export const Dance = <T>(options: DanceOptions<T>) => {
   return (target: any) => {
-    console.log('ok')
+    Reflect.defineMetadata(DANCE_METADATA_KEY, options, target)
   }
 }

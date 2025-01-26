@@ -1,9 +1,8 @@
-import type { ActType } from "../act-type.type"
-import { DANCE_METADATA_KEY } from "../constants"
+import { ACT_METADATA_KEY } from "../constants"
+import type { ActType } from "../types/act-type.type"
 
 export const Act = (type: ActType) => {
-  return (target: any, propertyKey: string, descriptor: PropertyDescriptor) => {
-    console.log('Act Decorator')
-    Reflect.defineMetadata('act', type, target, propertyKey)
+  return (target: any, propertyKey: string) => {
+    Reflect.defineMetadata(ACT_METADATA_KEY, type, target, propertyKey)
   }
 }
